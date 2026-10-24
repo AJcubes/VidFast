@@ -9,7 +9,7 @@ const autoToggle = document.getElementById("autoToggle");
 const rotateText = document.querySelector('.rotate-text');
 
 const mirrors = [
-    "vidrock.to"
+    "vidrock.to",
     "vidfast.vc"
 ];
 
