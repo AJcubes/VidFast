@@ -9,20 +9,15 @@ const autoToggle = document.getElementById("autoToggle");
 const rotateText = document.querySelector('.rotate-text');
 
 const mirrors = [
-    "vidfast.pro",
-    "vidfast.in",
-    "vidfast.io",
-    "vidfast.me",
-    "vidfast.net",
-    "vidfast.pm",
-    "vidfast.xyz"
+    "vidrock.to"
+    "vidfast.vc"
 ];
 
 function handleMovie(p) {
     const match = p.match(/^\/movie\/(\d+)(?:-[^/]+)?/);
     if (!match) return null;
     const id = match[1];
-    return mirrors.map(m => `https://${m}/movie/${id}?autoplay=true&theme=00FFB2`);
+    return mirrors.map(m => `https://${m}/movie/${id}?autoplay=true&theme=37D99E`);
 }
 
 function handleTV(p) {
@@ -32,7 +27,7 @@ function handleTV(p) {
     const season = match[2] || "1";
     const episode = match[3] || "1";
     if (match[3] && !match[2]) return null;
-    return mirrors.map(m => `https://${m}/tv/${id}/${season}/${episode}?autoplay=true&theme=00FFB2`);
+    return mirrors.map(m => `https://${m}/tv/${id}/${season}/${episode}?autoplay=true&autonext=true&theme=37D99E`);
 }
 
 let targets = null;
