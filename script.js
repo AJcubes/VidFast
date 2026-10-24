@@ -37,7 +37,8 @@ if (path.startsWith("/movie/")) {
     targets = handleTV(path);
 }
 
-const latestMirror = localStorage.getItem("latestMirror") || "vidfast.pro";
+const storedMirror = localStorage.getItem("latestMirror");
+const latestMirror = mirrors.includes(storedMirror) ? storedMirror : "vidrock.to";
 redirectBtn.textContent += ` (${latestMirror})`;
 const autoRedirect = localStorage.getItem("autoRedirect");
 if (autoRedirect === "true") {
